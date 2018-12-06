@@ -1,12 +1,11 @@
 #reset-game, #jumble-header,
-#messages, #get-word,
-#make-guess, #show-jumble,
-#definition{
+#messages, #make-guess,
+#show-jumble {
   display: flex;
   justify-content: center;
 }
 
-#player-instructions {
+#player-instructions, #get-word, #definition {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,4 +13,8 @@
 
 #messages {
   color: red;
+}
+
+#definition p {
+  text-align: center;
 }
