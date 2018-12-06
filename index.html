@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Jumble Game</title>
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+        <link href="responsive.css" rel="stylesheet" type="text/css" />
+        <link href="index.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+      <main class="col-12">
+        <section id="jumble-header">
+          <header><h1>Jumble Game</h1></header>
+        </section>
+        <section id="player-instructions">
+          <h3 id="how-to-play">How do I play?</h3>
+          <p>lorem ipsum</p>
+        </section>
+        <section id="messages">
+          <p>You have x guesses left</p>
+        </section>
+        <section id="get-word">
+          <form id="get-word-form">
+            <label for="word-length">Word length</label>
+            <input type="number" name="word-length" id="word-length" min="5" max="15">
+            <input type="submit" value="Submit">
+          </form>
+        </section>
+        <section id="show-jumble">
+          <p>sldkjfds</p>
+        </section>
+        <section id="make-guess">
+          <form action="#" id="guess-form">
+            <label for="guess">Make a guess</label>
+            <input type="text" id="guess">
+            <input type="submit" value="Submit Guess">
+          </form>
+        </section>
+        <section id="definition">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel placerat lorem. Phasellus non ornare arcu. Vestibulum tincidunt vel neque non venenatis.</p>
+        </section>
+        <section id="reset-game">
+          <button id="reset-game-button">Reset Game</button>
+        </section>
+
+      </main>
+      <script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script>
+      <script src="app.js"></script>
+    </body>
+</html>

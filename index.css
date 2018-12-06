@@ -1,0 +1,17 @@
+#reset-game, #jumble-header,
+#messages, #get-word,
+#make-guess, #show-jumble,
+#definition{
+  display: flex;
+  justify-content: center;
+}
+
+#player-instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#messages {
+  color: red;
+}
