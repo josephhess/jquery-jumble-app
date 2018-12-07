@@ -21,6 +21,7 @@ function getWordFromApi(length){
   })
   .then(function(data){
     displayWord(data.word);
+    setLocalStorage("rawWord", data.word);
   })
 }
 
