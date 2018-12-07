@@ -5,6 +5,7 @@ function watchGetWordSubmit(){
     e.preventDefault();
     const length = $('#word-length').val();
     getWordFromApi(length);
+    setLocalStorage("guessCount", 0);
   })
 }
 
@@ -22,7 +23,11 @@ function getWordFromApi(length){
   .then(function(data){
     displayWord(data.word);
     setLocalStorage("rawWord", data.word);
-    setLocalStorage("definition", data.results.definition)
+    if (data.results && data.results.definition){
+      setLocalStorage("definition", data.results.definition)
+    } else {
+      setLocalStorage("definition", "Sorry, we don't have a definition for this word");
+    }
   })
 }
 
