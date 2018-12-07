@@ -1,6 +1,6 @@
 const WORD_API_URL = 'https://wordsapiv1.p.rapidapi.com/words/?X-RapidAPI-Key=b24651c8f8msh87fc0fa3dfce863p1fd866jsn360608947fde &random=true&letters=';
 
-function watchSubmit(){
+function watchGetWordSubmit(){
   $('#get-word-form').on('submit', function(e){
     e.preventDefault();
     const length = $('#word-length').val();
@@ -22,6 +22,7 @@ function getWordFromApi(length){
   .then(function(data){
     displayWord(data.word);
     setLocalStorage("rawWord", data.word);
+    setLocalStorage("definition", data.results.definition)
   })
 }
 
@@ -29,7 +30,7 @@ function displayWord(word){
   $("#show-jumble h2").html(word);
 }
 
-$(watchSubmit);
+$(watchGetWordSubmit);
 
 
 

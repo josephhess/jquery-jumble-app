@@ -18,7 +18,6 @@ function shuffle(array){
   return array;
 }
 
-
 function generateRandomNumber(max){
    return Math.floor(Math.random() * max)
 }
