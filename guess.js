@@ -2,8 +2,13 @@ function watchGetGuessSubmit(){
   $('#guess-form').on('submit', e => {
     e.preventDefault();
     const guess = $('#guess').val();
-    setLocalStorage('currentGuess', guess);
-    compareGuessToSolution();
+    const solution = getLocalStorage('rawWord');
+    if (guess.length === solution.length){
+      setLocalStorage('currentGuess', guess);
+      compareGuessToSolution();
+    } else {
+      displayMessages('Your guess is not the same length as the clue');
+    }
   })
 }
 
@@ -15,8 +20,8 @@ function compareGuessToSolution(){
   const result = guess.localeCompare(solution);
 
   if (result === 0){
-    $("#messages p").html('You guessed it!');
-    $("#definition p").html(definition);
+    displayMessages('You guessed it!');
+    displayDefinition(definition);
   } else {
     guessCounter();
   }
@@ -25,20 +30,18 @@ function compareGuessToSolution(){
 function guessCounter(){
   currentCount = getLocalStorage("count");
   currentCount++;
-  const messageLocation = $('#messages');
-  const definitionLocation = $('#definition p');
   const solution = getLocalStorage('rawWord');
   const definition = getLocalStorage('definition');
 
-  if(currentCount === 5){
-    messageLocation.html(`Sorry, the word is ${solution}`);
-    definitionLocation.html(definition);
+  if(currentCount >= 5){
+    displayMessages(`Sorry, the word is ${solution}, please reset game and choose a new word`);
+    displayDefinition(definition);
   } else if ( currentCount === 4) {
-    messageLocation.html("You have one guess left! Definition hint will be shown if available");
-    definitionLocation.html(definition);
+    displayMessages("You have one guess left! Definition hint will be shown if available");
+    displayDefinition(definition);
     setLocalStorage("count", 5);
   } else {
-    messageLocation.html(`You have used ${currentCount} guesses`);
+    displayMessages(`You have used ${currentCount} guesses`);
   } setLocalStorage("count", currentCount);
 }
 

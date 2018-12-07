@@ -4,8 +4,8 @@ function watchGetWordSubmit(){
   $('#get-word-form').on('submit', function(e){
     e.preventDefault();
     const length = $('#word-length').val();
+    resetGame();
     getWordFromApi(length);
-    setLocalStorage("guessCount", 0);
   })
 }
 
@@ -21,18 +21,18 @@ function getWordFromApi(length){
     return res;
   })
   .then(function(data){
-    displayWord(data.word);
+    // console.log(data.results[0].definition);
+    let jumble = jumbleWord(data.word);
     setLocalStorage("rawWord", data.word);
-    if (data.results && data.results.definition){
-      setLocalStorage("definition", data.results.definition)
+    setLocalStorage("jumble", jumble);
+    displayWord(jumble);
+
+    if (data.results && data.results[0].definition){
+      setLocalStorage("definition", data.results[0].definition)
     } else {
       setLocalStorage("definition", "Sorry, we don't have a definition for this word");
     }
   })
-}
-
-function displayWord(word){
-  $("#show-jumble h2").html(word);
 }
 
 $(watchGetWordSubmit);

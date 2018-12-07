@@ -19,12 +19,21 @@
 
         <section id="player-instructions">
           <button id="how-to-play" >How do I play?</button>
+          <ul class="sr-only">
+            <li>First, select a word length and click submit</li>
+            <li>Your jumble will appear momentarily</li>
+            <li>Then input a guess in the make a guess area</li>
+            <li>There are 5 guesses available</li>
+            <li>On the 4th guess, if we have a definition available, it will be shown</li>
+            <li>Guesses need to be the same length as the clue</li>
+            <li>Some clues are two words so a space is included in the clue and solution</li>
+          </ul>
           <p class="sr-only">lorem ipsum</p>
           <button id="close-instructions" class="sr-only">close</button>
         </section>
 
         <section id="messages">
-          <p>You have x guesses left</p>
+          <p>Messages will appear here</p>
         </section>
 
         <section id="get-word">
@@ -37,7 +46,7 @@
         </section>
 
         <section id="show-jumble">
-          <h2>sldkjfds</h2>
+          <h2>Your jumble will appear here</h2>
         </section>
 
         <section id="make-guess">
@@ -50,7 +59,7 @@
 
         <section id="definition">
           <h3>Definition:</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel placerat lorem. Phasellus non ornare arcu. Vestibulum tincidunt vel neque non venenatis.</p>
+          <p>Definition, if available will go here after 4 guesses</p>
         </section>
 
         <section id="reset-game">
@@ -59,6 +68,7 @@
 
       </main>
       <script src="local-storage.js"></script>
+      <script src="html.js"></script>
       <script src="reset.js"></script>
       <script src="jumble.js"></script>
       <script src="get-word.js"></script>
