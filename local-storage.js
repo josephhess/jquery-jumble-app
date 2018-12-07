@@ -5,3 +5,7 @@ function setLocalStorage(key,value){
 function getLocalStorage(key){
   return localStorage.getItem(key);
 }
+
+function removeLocalStorage(key){
+  localStorage.removeItem(key);
+}
