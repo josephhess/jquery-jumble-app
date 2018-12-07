@@ -1,6 +1,6 @@
-#Simple Jquery Jumble App
+# Simple Jquery Jumble App
 
-##Instructions:
+## Instructions:
 
   First, select a word length and click submit
   Your jumble will appear momentarily
