@@ -1,4 +1,4 @@
-#Simpl Jquery Jumble App
+#Simple Jquery Jumble App
 
 ##Instructions:
 
