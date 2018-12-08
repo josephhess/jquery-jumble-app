@@ -4,7 +4,7 @@ Site can be found at:  https://josephhess.github.io/jquery-jumble-app/
 
 ### Instructions:
 
-  1. First, select a word length and click submit
+  1. Select a word length between 5 and 15 letters and click submit
   2. Your jumble will appear momentarily
   3. Then input a guess in the make a guess area
   4. There are 5 guesses available

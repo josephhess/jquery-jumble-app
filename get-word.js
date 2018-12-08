@@ -21,7 +21,6 @@ function getWordFromApi(length){
     return res;
   })
   .then(function(data){
-    // console.log(data.results[0].definition);
     let jumble = jumbleWord(data.word);
     setLocalStorage("rawWord", data.word);
     setLocalStorage("jumble", jumble);
