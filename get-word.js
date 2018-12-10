@@ -33,6 +33,10 @@ function getWordFromApi(length){
       setLocalStorage("definition", "Sorry, we don't have a definition for this word");
     }
   })
+  .catch(e => {
+    console.log(e);
+    displayErrors('We are having trouble getting a word, please try again');
+  })
 }
 
 $(watchGetWordSubmit);

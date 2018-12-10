@@ -18,7 +18,6 @@
   text-align: center;
 }
 
-
 .sr-only {
   border: 0;
   clip: rect(0 0 0 0);
@@ -30,25 +29,15 @@
   width: 1px;
 }
 
-@keyframes font-change {
-  from {transform: scale(0);}
+@keyframes font-size-move{
+  from {transform: scale(.75);}
   to {transform: scale(2);}
 }
 
-@keyframes bounce{
-  from {transform: translate3d(0,0,0);}
-  to {transform: translate3d(0,10px,0);}
-}
-
 .happyWinAnimation {
-  animation: bounce 0.2s;
+  animation: font-size-move 1s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
 
-}
-
-.happyWinScale {
-  animation: font-change 0.2s;
-  animation-iteration-count: infinite;
 }
 

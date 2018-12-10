@@ -1,11 +1,14 @@
 function watchGetGuessSubmit(){
   $('#guess-form').on('submit', e => {
     e.preventDefault();
+
     displayErrors('');
-    const guess = $('#guess').val();
+    input = $('#guess');
+    const guess = input.val();
+    input.val('');
     const solution = getLocalStorage('rawWord');
+
     if (guess.length === solution.length){
-      // setLocalStorage('currentGuess', guess);
       compareGuessToSolution(guess);
     } else {
       displayErrors('Your guess is not the same length as the clue');
@@ -22,7 +25,6 @@ function compareGuessToSolution(guess){
 
   if (result === 0){
     $('#user-messages').addClass('happyWinAnimation');
-    $('#user-messages').addClass('happyWinScale');
     displayMessages('You guessed it!');
     displayDefinition(definition);
   } else {
