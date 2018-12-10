@@ -22,6 +22,7 @@ function getWordFromApi(length){
   })
   .then(function(data){
     let jumble = jumbleWord(data.word);
+    setLocalStorage('guess-list', JSON.stringify([]));
     setLocalStorage("rawWord", data.word);
     setLocalStorage("jumble", jumble);
     displayWord(jumble);

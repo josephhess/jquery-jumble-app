@@ -1,17 +1,16 @@
 #reset-game, #jumble-header,
-#messages, #make-guess,
-#show-jumble {
+ #show-jumble {
   display: flex;
   justify-content: center;
 }
 
-#player-instructions, #get-word, #definition {
+#player-instructions, #get-word, #definition,#messages,#make-guess{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#messages {
+#errors {
   color: red;
 }
 
@@ -29,5 +28,27 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+@keyframes font-change {
+  from {transform: scale(0);}
+  to {transform: scale(2);}
+}
+
+@keyframes bounce{
+  from {transform: translate3d(0,0,0);}
+  to {transform: translate3d(0,10px,0);}
+}
+
+.happyWinAnimation {
+  animation: bounce 0.2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+}
+
+.happyWinScale {
+  animation: font-change 0.2s;
+  animation-iteration-count: infinite;
 }
 

@@ -19,7 +19,7 @@
 
         <section id="player-instructions">
           <button id="how-to-play" >How do I play?</button>
-          <ul class="sr-only">
+          <ul class="sr-only" aria-live="polite">
             <li>Select a word length between 5 and 15 letters and click submit</li>
             <li>Your jumble will appear momentarily</li>
             <li>Then input a guess in the make a guess area</li>
@@ -29,11 +29,12 @@
             <li>Some clues are two words so a space is included in the clue and solution</li>
           </ul>
           <p class="sr-only">lorem ipsum</p>
-          <button id="close-instructions" class="sr-only">close</button>
+          <button id="close-instructions" class="sr-only">close instructions</button>
         </section>
 
-        <section id="messages">
-          <p>Messages will appear here</p>
+        <section id="messages" class="happyWinAnimation" aria-live="assertive">
+          <p id="errors"></p>
+          <p id="user-messages"></p>
         </section>
 
         <section id="get-word">
@@ -45,7 +46,7 @@
           </form>
         </section>
 
-        <section id="show-jumble">
+        <section id="show-jumble" aria-live="assertive">
           <h2>Your jumble will appear here</h2>
         </section>
 
@@ -55,6 +56,7 @@
             <input type="text" id="guess">
             <input type="submit" value="Submit Guess">
           </form>
+          <p id="guess-list"></p>
         </section>
 
         <section id="definition">

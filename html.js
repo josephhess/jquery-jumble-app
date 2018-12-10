@@ -7,5 +7,13 @@ function displayDefinition(str){
 }
 
 function displayMessages(str){
-  $('#messages').html(str);
+  $('#user-messages').html(str);
+}
+
+function displayErrors(str){
+  $('#errors').html(str);
+}
+
+function displayGuesses(arr){
+  $('#guess-list').html(arr);
 }
