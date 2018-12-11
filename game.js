@@ -21,8 +21,8 @@ function compareGuessToSolution(guess){
   const guesses = JSON.parse(getLocalStorage("guess-list"));
   const solution = getLocalStorage("rawWord").toLowerCase();
   const definition = getLocalStorage("definition");
-  const result = guess.localeCompare(solution);
 
+  const result = guess.localeCompare(solution);
   if (result === 0){
     $('#user-messages').addClass('happyWinAnimation');
     displayMessages('You guessed it!');
