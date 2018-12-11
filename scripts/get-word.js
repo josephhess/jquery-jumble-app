@@ -25,7 +25,7 @@ function getWordFromApi(length){
     setLocalStorage('guess-list', JSON.stringify([]));
     setLocalStorage("rawWord", data.word);
     setLocalStorage("jumble", jumble);
-    displayWord(jumble);
+    displayWord(`Your jumble is: ${jumble}`);
 
     if (data.results && data.results[0].definition){
       setLocalStorage("definition", data.results[0].definition)
