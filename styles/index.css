@@ -20,8 +20,8 @@ h1,h4 {
      1px 1px 0 #000;
 }
 
-main {
-  padding: 20px;
+.main {
+  padding: 30px;
 }
 
 
@@ -163,6 +163,9 @@ p{
   padding-left: 30px;
 }
 
-
+#guess {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 
