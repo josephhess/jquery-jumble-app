@@ -1,5 +1,5 @@
 function displayWord(word){
-  $("#show-jumble h2").html(word);
+  $("#show-jumble h4").html(word);
 }
 
 function displayDefinition(str){
@@ -7,10 +7,12 @@ function displayDefinition(str){
 }
 
 function displayMessages(str){
+  $('#messages').removeClass('sr-only');
   $('#user-messages').html(str);
 }
 
 function displayErrors(str){
+  $('#messages').removeClass('sr-only');
   $('#errors').html(str);
 }
 

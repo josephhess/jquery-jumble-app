@@ -26,7 +26,10 @@ function compareGuessToSolution(guess){
   if (result === 0){
     $('#user-messages').addClass('happyWinAnimation');
     displayMessages('You guessed it!');
-    displayDefinition(definition);
+    guesses.push(guess);
+    console.log(guesses);
+    displayGuesses(guessListString(guesses));
+    displayDefinition(`Definition: ${definition}`);
   } else {
     if(guesses.includes(guess.toLowerCase())){
       displayErrors("You have already guessed that word, please try a new word");
@@ -41,22 +44,26 @@ function guessCounter(guesses){
   currentCount = guesses.length;
   const solution = getLocalStorage('rawWord');
   const definition = getLocalStorage('definition');
-  const guessListString = `Your guesses:  ${guesses.join(', ')}`;
+  // const guessListString = `Your guesses:  ${guesses.join(', ')}`;
 
   if(currentCount >= 5){
     displayMessages(`Sorry, the word is ${solution}, please reset game and choose a new word`);
-    displayGuesses(guesses);
-    displayDefinition(definition);
+    displayGuesses(guessListString(guesses));
+    displayDefinition(`Definition: ${definition}`);
   } else if ( currentCount === 4) {
     displayMessages("You have one guess left! Definition hint will be shown if available");
-    displayGuesses(guessListString);
-    displayDefinition(definition);
+    displayGuesses(guessListString(guesses));
+    displayDefinition(`Definition: ${definition}`);
     setLocalStorage("guess-list", JSON.stringify(guesses));
   } else {
-    displayGuesses(guessListString);
+    displayGuesses(guessListString(guesses));
     displayMessages(`You have used ${currentCount} guesses`);
     setLocalStorage("guess-list", JSON.stringify(guesses));
   }
 }
 
+
+function guessListString(guesses){
+  return `Your guesses:  ${guesses.join(', ')}`;
+}
 $(watchGetGuessSubmit);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -30,32 +30,31 @@
           </ul>
         </section>
 
-        <section id="messages" aria-live="assertive">
-          <p id="errors"></p>
-          <p id="user-messages"></p>
-        </section>
-
         <section id="get-word">
-          <h3><label for="get-word-form">Pick a word length to get your jumble</label></h3>
+          <h4><label for="get-word-form">Pick word length to get your jumble</label></h4>
           <form id="get-word-form">
-            <label for="word-length">Word length</label>
-            <input type="number" name="word-length" id="word-length" min="5" max="15">
-              <button type="submit" name="submit" id="addItemButton">
-            Submit
+            <label for="word-length" class="sr-only" >Word length</label>
+            <input type="number" name="word-length" id="word-length" min="5" max="15" value="5">
+              <button type="submit" name="submit" id="getWordButton">
+            Get Jumble
           </button>
             <!-- <input type="submit" value="Submit"> -->
           </form>
         </section>
 
         <section id="show-jumble" aria-live="assertive">
-          <h2>Your jumble will appear here</h2>
+          <h4>Jumble will appear here</h4>
+        </section>
+        <section id="messages" class="sr-only">
+          <p id="errors" aria-live="assertive"></p>
+          <p id="user-messages" aria-live="assertive"></p>
         </section>
 
         <section id="make-guess">
           <form action="#" id="guess-form">
-            <label for="guess">Make a guess</label>
-            <input type="text" id="guess">
-            <button type="submit" name="submit" id="addItemButton">Submit Guess
+            <label for="guess" class="sr-only">Make a guess</label>
+            <input type="text" id="guess" placeholder="Make a Guess">
+            <button type="submit" name="submit" id="makeGuessButton">Submit Guess
           </button>
             <!-- <input type="submit" value="Submit Guess"> -->
           </form>
@@ -63,8 +62,8 @@
         </section>
 
         <section id="definition">
-          <h3>Definition:</h3>
-          <p>Definition, if available will go here after 4 guesses</p>
+          <!-- <h4>Definition:</h4> -->
+          <p>Definition, if available, will go here after 4 guesses</p>
         </section>
 
         <section id="reset-game">

@@ -12,7 +12,9 @@ function resetGame(){
   setLocalStorage('definition', "Sorry, we don't have a definition for this word");
   displayWord('');
   displayMessages('');
-  displayDefinition('');
+  displayDefinition('Definition, if available, will go here after 4 guesses');
   displayGuesses('');
+  displayErrors('');
+  $('#messages').addClass('sr-only');
 
 }
