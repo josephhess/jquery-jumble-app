@@ -1,6 +1,5 @@
 
-body{
-
+body {
   font-family: 'Roboto', sans-serif !important;
   font-weight:300 !important;
   letter-spacing: -.02em !important;
@@ -11,7 +10,7 @@ body{
   background-image: url("../images/words.jpg");
 }
 
-h1{
+h1 {
   color: black;
   text-shadow:
    -1px -1px 0 #fff,
@@ -24,9 +23,7 @@ h1{
   padding: 30px;
 }
 
-
-button{
-
+button {
   background-color: rgb(68,68,68) !important;
   border-radius: 10px !important;
   box-shadow: 0px 1px 3px rgba(0,0,0,.2) !important;
@@ -40,20 +37,18 @@ button{
   margin-top: 10px !important;
 }
 
-button:hover{
+button:hover {
   opacity:.8;
   cursor: pointer;
 }
 
-
-#reset-game, #jumble-header,
- #show-jumble {
+#reset-game, #jumble-header, #show-jumble {
   display: flex;
   justify-content: center;
 }
 
-#player-instructions,
-#definition, #messages, #make-guess{
+#player-instructions, #definition,
+#messages, #make-guess {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,7 +97,7 @@ button:hover{
 
 }
 
-input{
+input {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 1px 3px rgba(0,0,0,.0);
@@ -113,11 +108,11 @@ input{
   width: 100%;
 }
 
-h2, p, h4{
+h2, p, h4 {
   text-align: center;
 }
 
-p{
+p {
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -130,7 +125,7 @@ p{
   margin-bottom: 10px
 }
 
-#definition h4{
+#definition h4 {
   margin-top: 15px;
   margin-bottom: 5px;
 }
@@ -156,11 +151,11 @@ p{
   border-radius: 10px;
 }
 
-#guess-list, #player-instructions ul{
+#guess-list, #player-instructions ul {
   padding: 5px;
 }
 
-#player-instructions ul{
+#player-instructions ul {
   padding-left: 30px;
 }
 

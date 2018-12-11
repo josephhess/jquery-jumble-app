@@ -1,7 +1,7 @@
 const WORD_API_URL = 'https://wordsapiv1.p.rapidapi.com/words/?X-RapidAPI-Key=b24651c8f8msh87fc0fa3dfce863p1fd866jsn360608947fde &random=true&letters=';
 
 function watchGetWordSubmit(){
-  $('#get-word-form').on('submit', function(e){
+  $('#get-word-form').on('submit', e => {
     e.preventDefault();
     const length = $('#word-length').val();
     resetGame();
@@ -17,10 +17,10 @@ function getWordFromApi(length){
       "X-RapidAPI-Key": "b24651c8f8msh87fc0fa3dfce863p1fd866jsn360608947fde"
     }
   }
-  $.ajax(settings, function(res){
+  $.ajax(settings, (res) => {
     return res;
   })
-  .then(function(data){
+  .then(data => {
     let jumble = jumbleWord(data.word);
     setLocalStorage('guess-list', JSON.stringify([]));
     setLocalStorage("rawWord", data.word);

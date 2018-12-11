@@ -4,7 +4,6 @@ $('#reset-game-button').on('click', e => {
 })
 
 function resetGame(){
-  // removeLocalStorage('count');
   removeLocalStorage('rawWord');
   removeLocalStorage('currentGuess');
   removeLocalStorage('guessCount');

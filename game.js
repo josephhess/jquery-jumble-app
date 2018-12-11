@@ -27,7 +27,6 @@ function compareGuessToSolution(guess){
     $('#user-messages').addClass('happyWinAnimation');
     displayMessages('You guessed it!');
     guesses.push(guess);
-    console.log(guesses);
     displayGuesses(guessListString(guesses));
     displayDefinition(`Definition: ${definition}`);
   } else {
@@ -44,7 +43,6 @@ function guessCounter(guesses){
   currentCount = guesses.length;
   const solution = getLocalStorage('rawWord');
   const definition = getLocalStorage('definition');
-  // const guessListString = `Your guesses:  ${guesses.join(', ')}`;
 
   if(currentCount >= 5){
     displayMessages(`Sorry, the word is ${solution}, please reset game and choose a new word`);
