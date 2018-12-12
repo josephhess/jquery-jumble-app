@@ -15,7 +15,8 @@ Site can be found at:  https://josephhess.github.io/jquery-jumble-app/
   6. Guesses need to be the same length as the clue
   7. Some clues are two words so a space is included in the clue and solution
 
-### Stack: Html, CSS, Javascript, Jquery, WordApi
+### Stack:
+  Html, CSS, Javascript, Jquery, WordApi
 
 ### Potential Todos:
   1. Change to a different api, the wordapi is inconsistent in what is returned
@@ -25,5 +26,5 @@ Site can be found at:  https://josephhess.github.io/jquery-jumble-app/
 
 ![initial app view](images/initial-view.png)
 ![initial view after jumble is displayed](images/jumble-initial-view.png)
-![view with instructions opened](images/show-instructions.png)
+![view with instructions opened](images/show-instructions-view.png)
 ![view upon a winning guess ](images/winning-view.png)
