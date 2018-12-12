@@ -7,6 +7,10 @@ function watchGetGuessSubmit(){
     const guess = input.val();
     input.val('');
     const solution = getLocalStorage('rawWord');
+    console.log(solution.length);
+    if (solution.length === 0){
+      return displayErrors('Please get a jumble before guessing');
+    }
 
     if (guess.length === solution.length){
       compareGuessToSolution(guess);
