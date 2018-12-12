@@ -1,5 +1,5 @@
 function displayWord(word){
-  $("#show-jumble h4").html(word);
+  $("#show-jumble h2").html(word);
 }
 
 function displayDefinition(str){

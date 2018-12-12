@@ -7,6 +7,8 @@ function resetGame(){
   removeLocalStorage('rawWord');
   removeLocalStorage('currentGuess');
   removeLocalStorage('guessCount');
+  removeLocalStorage('jumble');
+  setLocalStorage('rawWord', '')
   setLocalStorage('guess-list', JSON.stringify([]));
   setLocalStorage('definition', "Sorry, we don't have a definition for this word");
   displayWord('');
