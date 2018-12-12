@@ -10,17 +10,20 @@ body {
   background-image: url("../images/words.jpg");
 }
 
-h1 {
+/*h1 {
   color: black;
   text-shadow:
    -1px -1px 0 #fff,
     1px -1px 0 #fff,
     -1px 1px 0 #fff,
      1px 1px 0 #fff;
-}
+}*/
 
-.main {
+.content-wrapper {
   padding: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button {
@@ -108,7 +111,7 @@ input {
   width: 100%;
 }
 
-h2, p, h4 {
+h2, p {
   text-align: center;
 }
 
@@ -125,12 +128,12 @@ p {
   margin-bottom: 10px
 }
 
-#definition h4 {
+#definition h2 {
   margin-top: 15px;
   margin-bottom: 5px;
 }
 
-#get-word h4 {
+#get-word h2 {
   margin-bottom: -5px;
 }
 
@@ -169,11 +172,14 @@ p {
   border-radius: 10px;
 }
 
-#show-jumble h4 {
+#show-jumble h2 {
   background-color: white;
   border-radius: 10px;
   padding: 5px;
 }
 
-
+.h2-style {
+  font-weight:300 !important;
+  font-size: 1em;
+}
 

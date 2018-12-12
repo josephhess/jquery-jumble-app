@@ -15,5 +15,4 @@ function resetGame(){
   displayGuesses('');
   displayErrors('');
   $('#messages').addClass('sr-only');
-
 }
