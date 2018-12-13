@@ -10,7 +10,7 @@ function resetGame(){
   removeLocalStorage('jumble');
   setLocalStorage('rawWord', '')
   setLocalStorage('guess-list', JSON.stringify([]));
-  setLocalStorage('definition', "Sorry, we don't have a definition for this word");
+  setLocalStorage('definition', 'Sorry, we dont have a definition for this word');
   displayWord('');
   displayMessages('');
   displayDefinition('Definition, if available, will go here after 4 guesses');

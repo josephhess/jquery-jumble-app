@@ -7,7 +7,6 @@ function watchGetGuessSubmit(){
     const guess = input.val();
     input.val('');
     const solution = getLocalStorage('rawWord');
-    console.log(solution.length);
     if (solution.length === 0){
       return displayErrors('Please get a jumble before guessing');
     }
@@ -22,9 +21,9 @@ function watchGetGuessSubmit(){
 
 
 function compareGuessToSolution(guess){
-  const guesses = JSON.parse(getLocalStorage("guess-list"));
-  const solution = getLocalStorage("rawWord").toLowerCase();
-  const definition = getLocalStorage("definition");
+  const guesses = JSON.parse(getLocalStorage('guess-list'));
+  const solution = getLocalStorage('rawWord').toLowerCase();
+  const definition = getLocalStorage('definition');
 
   const result = guess.localeCompare(solution);
   if (result === 0){
@@ -35,7 +34,7 @@ function compareGuessToSolution(guess){
     displayDefinition(`Definition: ${definition}`);
   } else {
     if(guesses.includes(guess.toLowerCase())){
-      displayErrors("You have already guessed that word, please try a new word");
+      displayErrors('You have already guessed that word, please try a new word');
     } else {
       guesses.push(guess.toLowerCase());
       guessCounter(guesses);
@@ -53,14 +52,14 @@ function guessCounter(guesses){
     displayGuesses(guessListString(guesses));
     displayDefinition(`Definition: ${definition}`);
   } else if ( currentCount === 4) {
-    displayMessages("You have one guess left! Definition hint will be shown if available");
+    displayMessages('You have one guess left! Definition hint will be shown if available');
     displayGuesses(guessListString(guesses));
     displayDefinition(`Definition: ${definition}`);
-    setLocalStorage("guess-list", JSON.stringify(guesses));
+    setLocalStorage('guess-list', JSON.stringify(guesses));
   } else {
     displayGuesses(guessListString(guesses));
     displayMessages(`You have used ${currentCount} guesses`);
-    setLocalStorage("guess-list", JSON.stringify(guesses));
+    setLocalStorage('guess-list', JSON.stringify(guesses));
   }
 }
 
