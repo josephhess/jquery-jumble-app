@@ -170,6 +170,7 @@ p {
 #guess {
   padding-left: 20px;
   padding-right: 20px;
+  text-align: center;
 }
 
 #get-word {
@@ -189,6 +190,6 @@ p {
 }
 
 #reset-game-button {
-  max-width: 290px;
+  max-width: 356px;
 }
 
