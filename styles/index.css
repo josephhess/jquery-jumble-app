@@ -133,6 +133,15 @@ p {
 
 #jumble-header h1 {
   margin: 0px;
+      background-color: white;
+    border-radius: 50%;
+    border: 10px double orange;
+    width: 300px;
+    height: 80px;
+    text-align: center;
+    padding-top: 10px;
+    box-shadow: 0px 0px 40px orange;
+    color: darksalmon;
 }
 
 #getWordButton {
@@ -177,5 +186,9 @@ p {
 .h2-style {
   font-weight:300 !important;
   font-size: 1em;
+}
+
+#reset-game-button {
+  max-width: 290px;
 }
 

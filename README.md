@@ -24,7 +24,7 @@ Site can be found at:  https://josephhess.github.io/jquery-jumble-app/
 
 ### Screenshots:
 
-![initial app view](images/initial-view.png)
-![initial view after jumble is displayed](images/jumble-initial-view.png)
-![view with instructions opened](images/show-instructions-view.png)
-![view upon a winning guess ](images/winning-view.png)
+![initial app view](images/initial-view-2.png)
+![initial view after jumble is displayed](images/jumble-initial-view-2.png)
+![view with instructions opened](images/show-instructions-view-2.png)
+![view upon a winning guess ](images/winning-view-2.png)
